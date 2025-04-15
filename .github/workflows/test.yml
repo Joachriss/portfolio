@@ -1,18 +1,22 @@
-name : portfolio-test
-
-on: 
+name: portfolio test
+on:
   push:
-    branch:
-      - dev
+    branches:[dev]
 
-jobs: 
+jobs:
   test:
     runs-on: ubuntu-latest
-    container:
-      image: node:22.3.0
     steps:
-      - uses: actions/checkout@v3
+      - name: checkout code
+        uses: actions/checkout@v3
+
+      - name: setup node
+        uses: actions/setup-node@v3
         with:
-        node-version: 22.3.0
-      - run: npm ci
-      - run: npm run test
+          node-version: 22.3.0
+
+      - name: install dependencies
+        run: npm install
+
+      - name: run tests
+        run: npm run test
