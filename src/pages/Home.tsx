@@ -3,9 +3,10 @@ import { WhatIDo } from "../components/WhatIDo";
 
 export const Home = () => {
     return (
-      <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-white">
-        <div className="text-center h-screen w-full flex flex-col items-center justify-center bg-[#191919]">
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-200 mb-4" data-testid="home-title">
+      // <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-white">
+      <section className="min-h-screen flex flex-col items-center justify-center">
+        <div className="text-center h-screen w-full flex flex-col items-center justify-center bg-black">
+          <h2 className="text-4xl md:text-6xl font-bold dark:text-gray-300 text-gray-400 mb-4" data-testid="home-title">
             Hi, I'm Johannes Mwasanyila
           </h2>
           <p className="text-xl text-gray-600 mb-6">

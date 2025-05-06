@@ -41,15 +41,15 @@ export const AboutSection = () => {
         { name: 'VsCode', image: vscode }
     ];
     return (
-        <div className='container mx-auto py-10 px-4 flex flex-col md:flex-row gap-5 justify-center'>
+        <div className='container mx-auto py-10 px-4 flex flex-col md:flex-row gap-5 justify-center bg-transparent'>
             <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 exit={{ opacity: 0, x: 50 }}
                 viewport={{ once: false }}
-                className="w-full md:w-1/2 text-center">
-                <div className='text-4xl font-bold text-black'>About Me</div>
+                className="w-full md:w-1/2 text-black dark:text-gray-300 text-center bg-transparent">
+                <div className='text-4xl font-bold '>About Me</div>
                 <div className='mt-4 text-lg'>
                     <p>Hi, I'm Johannes Mwasanyila, a developer skilled in Python, React, Node.js, MongoDB, MySQL, and Flutter. Passionate about building impactful solutions
                         and continuously learning. </p>
@@ -63,7 +63,7 @@ export const AboutSection = () => {
                     transition={{ duration: 0.8 }}
                     exit={{ opacity: 0, x: -50 }}
                     viewport={{ once: false }}
-                    className="w-full md:w-1/2 mt-16 md:mt-0 text-center">
+                    className="w-full md:w-1/2 mt-16 md:mt-0 text-center text-black dark:text-gray-300">
                     <div className='text-4xl font-semibold w-full'>Skills </div>
                     <div className='mt-4 grid grid-cols-4 gap-4'>
                         {
