@@ -7,14 +7,13 @@ import { Home } from '../Home';
 describe('Home component test', () => {
     it('should render without crashing', () => {
         render(<Home />);
-        //screen.debug(); // This will log the entire DOM tree to the console
         expect(screen.getByText(/Software Developer & System Administrator/i)).toBeInTheDocument();
     });
 
-    // it('should render the call to action button', () => {
-    //     render(<Home />);
-    //     expect(
-    //         screen.getByRole('link', { name: /View My Work/i })
-    //     ).toBeInTheDocument();
-    // });
+    it('should render the call to action button', () => {
+        render(<Home />);
+        expect(
+            screen.getByRole('link', { name: /View My Work/i })
+        ).toBeInTheDocument();
+    });
 });
