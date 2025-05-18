@@ -1,4 +1,6 @@
 import { AboutSection } from "../components/AboutSection";
+import { Services } from "../components/Services";
+import { Skills } from "../components/Skills";
 import { WhatIDo } from "../components/WhatIDo";
 
 export const Home = () => {
@@ -20,6 +22,8 @@ export const Home = () => {
           </a>
         </div>
         <AboutSection />
+        <Services/>
+        <Skills/>
         <WhatIDo />
       </section>
     );
