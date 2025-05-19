@@ -1,7 +1,4 @@
-import { render, fireEvent,screen } from "@testing-library/react";
-import { describe, it, expect } from "vitest";
-import { Navbar } from "../components/Navbar";
-import {  ThemeContextProvider } from "../../contexts/ThemeContext";
+import { describe, it } from "vitest";
 
 describe('ThemeContext', () => {
     it('should toggle theme', () => {
