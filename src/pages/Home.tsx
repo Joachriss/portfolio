@@ -2,7 +2,6 @@ import { AboutSection } from "../components/AboutSection";
 import { ProjectsSection } from "../components/ProjectsSection";
 import { Services } from "../components/Services";
 import { Skills } from "../components/Skills";
-import { WhatIDo } from "../components/WhatIDo";
 import bg01 from '/images/bg01.jpg';
 
 export const Home = () => {
