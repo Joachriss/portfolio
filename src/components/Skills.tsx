@@ -29,7 +29,7 @@ export const Skills = () => {
         { name: 'JavaScript', image: javascript },
         { name: 'HTML', image: html },
         { name: 'CSS', image: css },
-        { name: 'TypeScript', image: typescript },        
+        { name: 'TypeScript', image: typescript },
         { name: 'Redux', image: redux },
         { name: 'Git', image: git },
         { name: 'GitHub', image: github },
@@ -39,17 +39,17 @@ export const Skills = () => {
         { name: 'VsCode', image: vscode }
     ];
     return (
-        <div className='container p-5'>
+        <div className='container p-5 grid grid-cols-1 md:grid-cols-2 gap-5'>
             <AnimatePresence >
                 <motion.div
-                    initial={{ opacity: 0, x: -50 }}
+                    initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    exit={{ opacity: 0, x: 50 }}
+                    exit={{ opacity: 0, x: -50 }}
                     viewport={{ once: false }}
                     className="w-full mt-16 md:mt-0 text-center text-black dark:text-gray-300">
                     <div className='text-4xl font-semibold w-full'>Skills </div>
-                    <div className='mt-4 grid grid-cols-6 gap-4'>
+                    <div className='mt-4 grid grid-cols-5 gap-4'>
                         {
                             skills.map((skill, index) => (
                                 <div key={index} className="text-center flex flex-col items-center">
@@ -64,6 +64,32 @@ export const Skills = () => {
                     </div>
                 </motion.div>
             </AnimatePresence>
+            <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                exit={{ opacity: 0, x: 50 }}
+                viewport={{ once: false }}
+                className='p-5'
+            >
+                <div className='text-xl mt-10 font-semibold w-full'>Overall skills</div>
+                <div className='mt-4 flex flex-col gap-4'>
+
+                    web development
+                    mobile development
+                    responsive design
+                    database management
+                    version control
+                    cloud computing
+                    software development
+                    problem solving
+                    teamwork
+                    communication
+                    project management
+
+
+                </div>
+            </motion.div>
         </div>
     )
 }
