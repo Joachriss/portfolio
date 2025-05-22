@@ -54,10 +54,10 @@ export const Navbar = () => {
                         </button>
                     </div>
                     <div className="flex flex-col gap-x-6 gap-y-4 text-gray-300 dark:text-gray-200 font-medium p-4">
-                        <a href="#about" onClick={()=>{setIsOpen(false)}} className="w-full"><p className="hover:text-blue-600 w-full p-3">About</p></a>
-                        <a href="#projects" onClick={()=>{setIsOpen(false)}} className="w-full"><p className="hover:text-blue-600 w-full p-3">Projects</p></a>
-                        <a href="#skills" onClick={()=>{setIsOpen(false)}} className="w-full"><p className="hover:text-blue-600 w-full p-3">Skills</p></a>
-                        <a href="#contact" onClick={()=>{setIsOpen(false)}} className="w-full"><p className="hover:text-blue-600 w-full p-3">Contact</p></a>
+                        <a href="#about" onClick={()=>{setIsOpen(false)}} className="w-full">About</a>
+                        <a href="#projects" onClick={()=>{setIsOpen(false)}} className="w-full">Projects</a>
+                        <a href="#skills" onClick={()=>{setIsOpen(false)}} className="w-full">Skills</a>
+                        <a href="#contact" onClick={()=>{setIsOpen(false)}} className="w-full">Contact</a>
                     </div>
                 {/* </div> */}
             </div>
