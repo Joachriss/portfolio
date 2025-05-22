@@ -1,21 +1,23 @@
-import bg00 from "/images/bg00.jpg";
 
-interface projectCardProps{
-    name: string;
-    link: string;
-    description: string
+interface projectCardProps {
+  name: string;
+  link: string;
+  image: string;
+  description: string
 }
 
-export const ProjectCard = ({name,link,description}:projectCardProps) => {
+export const ProjectCard = ({ name, link, image, description }: projectCardProps) => {
   return (
-    <a href={link} className="rounded cursor-pointer">
-        <div className="overflow-hidden h-30 w-full">
-            <img src={bg00} alt="" />
+    <div className=" w-full mx-auto group">
+      <a href={link} className="rounded cursor-pointer">
+        <div className="overflow-hidden w-full h-44">
+          <img src={image} className="w-full group-hover:scale-105 duration-200 h-full object-cover" alt="" />
         </div>
         <div className="p-3">
-            <h2 className="text-lg">{name}</h2>
-            <small>{description}</small>
+          <h2 className="text-lg">{name}</h2>
+          <small>{description}</small>
         </div>
-    </a>
+      </a>
+    </div>
   )
 }
