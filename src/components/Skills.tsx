@@ -15,7 +15,9 @@ import vscode from '/logos/vscode.svg';
 import postgresql from '/logos/postgresql.svg';
 import amazon from '/logos/amazon.svg';
 import c from '/logos/c.svg';
+import azampay from '/logos/azam.jpg';
 import { AnimatePresence, motion } from 'motion/react';
+import { ProgressBar } from './ProgressBar';
 
 
 export const Skills = () => {
@@ -36,10 +38,11 @@ export const Skills = () => {
         { name: 'C', image: c },
         { name: 'AWS', image: amazon },
         { name: 'PostgreSQL', image: postgresql },
-        { name: 'VsCode', image: vscode }
+        { name: 'VsCode', image: vscode },
+        { name: 'AzamPesa', image: azampay },
     ];
     return (
-        <div className='container p-5 grid grid-cols-1 md:grid-cols-2 gap-5'>
+        <div className='container p-5 grid grid-cols-1 md:grid-cols-2 gap-5 overflow-hidden' id='skills'>
             <AnimatePresence >
                 <motion.div
                     initial={{ opacity: 0, x: 50 }}
@@ -47,13 +50,13 @@ export const Skills = () => {
                     transition={{ duration: 0.8 }}
                     exit={{ opacity: 0, x: -50 }}
                     viewport={{ once: false }}
-                    className="w-full mt-16 md:mt-0 text-center text-black dark:text-gray-300">
-                    <div className='text-4xl font-semibold w-full'>Skills </div>
-                    <div className='mt-4 grid grid-cols-5 gap-4'>
+                    className="w-full mt-6 md:mt-0 text-center text-black dark:text-gray-300">
+                    <div className='text-4xl font-semibold text-start w-full'>Skills </div>
+                    <div className='mt-4 grid grid-cols-4  gap-4'>
                         {
                             skills.map((skill, index) => (
                                 <div key={index} className="text-center flex flex-col items-center">
-                                    <img className='' width={80} src={skill.image} alt="" />
+                                    <img className='object-contain' width={80} src={skill.image} alt="" />
                                     <p className='text-xs font-semibold'>{skill.name}</p>
                                 </div>
                             ))
@@ -72,22 +75,17 @@ export const Skills = () => {
                 viewport={{ once: false }}
                 className='p-5'
             >
-                <div className='text-xl mt-10 font-semibold w-full'>Overall skills</div>
-                <div className='mt-4 flex flex-col gap-4'>
-
-                    web development
-                    mobile development
-                    responsive design
-                    database management
-                    version control
-                    cloud computing
-                    software development
-                    problem solving
-                    teamwork
-                    communication
-                    project management
-
-
+                <div className='text-xl mt-10 text-black dark:text-gray-300 font-semibold w-full'>Overall skills</div>
+                <div className='mt-4 ps-2 flex flex-col gap-4'>
+                    <ProgressBar name='web development' progress={90} />
+                    <ProgressBar name='mobile development' progress={75} />
+                    <ProgressBar name='database management' progress={85} />
+                    <ProgressBar name='version control' progress={90} />
+                    <ProgressBar name='cloud computing' progress={70} />
+                    <ProgressBar name='problem solving' progress={90} />
+                    <ProgressBar name='teamwork' progress={90} />
+                    <ProgressBar name='communication' progress={90} />
+                    <ProgressBar name='project management' progress={90} />
                 </div>
             </motion.div>
         </div>
