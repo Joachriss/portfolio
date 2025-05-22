@@ -38,10 +38,10 @@ export const Navbar = () => {
                 </button>
             </div>
             <ul className="hidden md:flex gap-6 text-gray-600 dark:text-gray-200 font-medium">
-                <li onClick={()=>{setIsOpen(false)}}><a href="#about" className="hover:text-blue-600">About</a></li>
-                <li onClick={()=>{setIsOpen(false)}}><a href="#projects" className="hover:text-blue-600">Projects</a></li>
-                <li onClick={()=>{setIsOpen(false)}}><a href="#skills" className="hover:text-blue-600">Skills</a></li>
-                <li onClick={()=>{setIsOpen(false)}}><a href="#contact" className="hover:text-blue-600">Contact</a></li>
+                <li onClick={()=>{setIsOpen(false)}} className="w-full"><a href="#about" className="hover:text-blue-600 w-full p-2">About</a></li>
+                <li onClick={()=>{setIsOpen(false)}} className="w-full"><a href="#projects" className="hover:text-blue-600 w-full p-2">Projects</a></li>
+                <li onClick={()=>{setIsOpen(false)}} className="w-full"><a href="#skills" className="hover:text-blue-600 w-full p-2">Skills</a></li>
+                <li onClick={()=>{setIsOpen(false)}} className="w-full"><a href="#contact" className="hover:text-blue-600 w-full p-2">Contact</a></li>
                 <li onClick={() => toggleTheme()}><button role="button" type="button">{theme !== "dark" ? <MdDarkMode size={25} /> : <MdLightMode size={25} />}</button></li>
             </ul>
             <div onClick={handleToggle} className={`${isOpen ? "" : "hidden"} md:hidden absolute h-screen w-full top-0 left-0 z-10 bg-black/50`}></div>
@@ -53,12 +53,12 @@ export const Navbar = () => {
                             <HiMenuAlt3 size={25} />
                         </button>
                     </div>
-                    <ul className="flex flex-col gap-6 text-gray-300 dark:text-gray-200 font-medium p-4">
-                        <li onClick={()=>{setIsOpen(false)}}><a href="#about" className="hover:text-blue-600">About</a></li>
-                        <li onClick={()=>{setIsOpen(false)}}><a href="#projects" className="hover:text-blue-600">Projects</a></li>
-                        <li onClick={()=>{setIsOpen(false)}}><a href="#skills" className="hover:text-blue-600">Skills</a></li>
-                        <li onClick={()=>{setIsOpen(false)}}><a href="#contact" className="hover:text-blue-600">Contact</a></li>
-                    </ul>
+                    <div className="flex flex-col gap-x-6 gap-y-4 text-gray-300 dark:text-gray-200 font-medium p-4">
+                        <a href="#about" onClick={()=>{setIsOpen(false)}} className="w-full"><p className="hover:text-blue-600 w-full p-3">About</p></a>
+                        <a href="#projects" onClick={()=>{setIsOpen(false)}} className="w-full"><p className="hover:text-blue-600 w-full p-3">Projects</p></a>
+                        <a href="#skills" onClick={()=>{setIsOpen(false)}} className="w-full"><p className="hover:text-blue-600 w-full p-3">Skills</p></a>
+                        <a href="#contact" onClick={()=>{setIsOpen(false)}} className="w-full"><p className="hover:text-blue-600 w-full p-3">Contact</p></a>
+                    </div>
                 {/* </div> */}
             </div>
         </nav>
