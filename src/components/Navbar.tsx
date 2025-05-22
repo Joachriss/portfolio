@@ -48,12 +48,12 @@ export const Navbar = () => {
             <div className={`h-screen z-20 md:hidden fixed top-0 w-[70%] right-0 bg-[#191919] transform ${isOpen ? "-transition-transform" : "translate-x-full"} duration-300 ease-in-out`}>
                 {/* <div className="w-64 bg-white dark:bg-[#202020] shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out"> */}
                     <div className="flex items-center justify-between p-4">
-                        <h1 className="text-xl font-bold text-gray-800 dark:text-gray-200">Joa Chriss</h1>
-                        <button onClick={handleToggle} className="text-gray-600 dark:text-gray-200">
+                        <h1 className="text-xl font-bold text-gray-300 dark:text-gray-200">Joa Chriss</h1>
+                        <button onClick={handleToggle} className="text-gray-300 dark:text-gray-200">
                             <HiMenuAlt3 size={25} />
                         </button>
                     </div>
-                    <ul className="flex flex-col gap-6 text-gray-600 dark:text-gray-200 font-medium p-4">
+                    <ul className="flex flex-col gap-6 text-gray-300 dark:text-gray-200 font-medium p-4">
                         <li><a href="#about" className="hover:text-blue-600">About</a></li>
                         <li><a href="#projects" className="hover:text-blue-600">Projects</a></li>
                         <li><a href="#skills" className="hover:text-blue-600">Skills</a></li>
