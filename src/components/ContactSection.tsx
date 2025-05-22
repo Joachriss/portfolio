@@ -29,7 +29,7 @@ export const ContactSection = () => {
                 <div className="flex gap-4 items-center flex-row">
                     <FaLinkedin size={30} />
                     <p>
-                        <a href="https://www.linkedin.com/in/johannes-mwasanyila-4b0b1a1b6/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/johannes-mwasanyila-804868283/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     </p>
                 </div>
                 <div className="flex gap-4 items-center flex-row">
