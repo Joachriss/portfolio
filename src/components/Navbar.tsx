@@ -44,8 +44,8 @@ export const Navbar = () => {
                 <li><a href="#contact" className="hover:text-blue-600">Contact</a></li>
                 <li onClick={() => toggleTheme()}><button role="button" type="button">{theme !== "dark" ? <MdDarkMode size={25} /> : <MdLightMode size={25} />}</button></li>
             </ul>
-            <div onClick={handleToggle} className={`${!isOpen ? "" : "hidden"} md:hidden absolute h-screen w-full top-0 left-0 z-10 bg-black/50`}></div>
-            <div className={`h-screen z-20 md:hidden fixed top-0 w-[70%] right-0 bg-[#191919] transform ${isOpen ? "translate-x-full" : "-transition-transform"} duration-300 ease-in-out`}>
+            <div onClick={handleToggle} className={`${isOpen ? "" : "hidden"} md:hidden absolute h-screen w-full top-0 left-0 z-10 bg-black/50`}></div>
+            <div className={`h-screen z-20 md:hidden fixed top-0 w-[70%] right-0 bg-[#191919] transform ${isOpen ? "-transition-transform" : "translate-x-full"} duration-300 ease-in-out`}>
                 {/* <div className="w-64 bg-white dark:bg-[#202020] shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out"> */}
                     <div className="flex items-center justify-between p-4">
                         <h1 className="text-xl font-bold text-gray-800 dark:text-gray-200">Joa Chriss</h1>
